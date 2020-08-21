@@ -23,7 +23,7 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 const sess = {
-  secret: 'Super secret secret',
+  secret: 'slow fast great amazing and secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
