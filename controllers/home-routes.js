@@ -50,18 +50,16 @@ router.get('/signup', (req, res) => {
 }); 
 
 
-/* router.get('/post/:id', (req, res) => {
+router.get('/post/:id', (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
-      'post_url',
+      'post_content',
       'title',
-      'created_at',
-      [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
-    ],
+      'created_at'],
     include: [
       {
         model: Comment,
@@ -93,6 +91,6 @@ router.get('/signup', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-}); */
+}); 
 
 module.exports = router;
