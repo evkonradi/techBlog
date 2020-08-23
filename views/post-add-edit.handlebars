@@ -1,0 +1,21 @@
+<section>
+
+  {{#isNew}}
+  <h2>Create New Post</h2>
+  <form class="new-post-form">
+    {{> post-add-edit}}
+    <button type="submit" class="btn" id="btnNewSubmit">Submit</button>
+  </form>
+  {{/if}}
+
+  {{#unless}}
+  <h2>Edit Post</h2>
+  <form class="edit-post-form">
+    {{> post-add-edit}}
+    <button type="submit" class="btn" id="btnEditSubmit">Submit</button>
+  </form>
+  {{/unless}}
+
+</section>
+
+<script src="/javascript/add-edit-post.js"></script>
