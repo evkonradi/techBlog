@@ -1,6 +1,11 @@
     <article class="post">
       <div class="title">
+        {{#if fromDashBoard}}
+        <a href="/dashboard/post-edit/{{id}}">{{title}}</a>
+        {{/if}}
+        {{#unless fromDashBoard}}
         <a href="/post/{{id}}">{{title}}</a>
+        {{/unless}}
         <span>Posted by {{user.username}} on {{format_date created_at}}</span>
       </div>
       <div class="meta">

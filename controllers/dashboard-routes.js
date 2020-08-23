@@ -32,7 +32,7 @@ router.get('/', (req, res) => {
         .then(dbPostData => {
           // serialize data before passing to template
           const posts = dbPostData.map(post => post.get({ plain: true }));
-          res.render('dashboard', { posts, loggedIn: true });
+          res.render('dashboard', { posts });
         })
         .catch(err => {
           console.log(err);
@@ -40,7 +40,7 @@ router.get('/', (req, res) => {
         });
 });
 
-router.get('/edit/:id', (req, res) => {
+router.get('/post-edit/:id', (req, res) => {
   Post.findOne({
     where: {
       id: req.params.id
@@ -64,7 +64,7 @@ router.get('/edit/:id', (req, res) => {
   .then(dbPostData => {
     // serialize data before passing to template
     const post = dbPostData.get({ plain: true });
-    res.render('edit-post', { post, loggedIn: true });
+    res.render('post-edit', { post });
   })
   .catch(err => {
     console.log(err);
@@ -73,7 +73,7 @@ router.get('/edit/:id', (req, res) => {
 });
 
 router.get('/post-add', (req, res) => {
-  res.render('post-add-edit', { isNew: true });
+  res.render('post-add');
 });
 
 
