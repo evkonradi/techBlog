@@ -1,6 +1,6 @@
 <section>
 
-  {{#isNew}}
+  {{#if isNew}}
   <h2>Create New Post</h2>
   <form class="new-post-form">
     {{> post-add-edit}}
@@ -8,7 +8,7 @@
   </form>
   {{/if}}
 
-  {{#unless}}
+  {{#unless isNew}}
   <h2>Edit Post</h2>
   <form class="edit-post-form">
     {{> post-add-edit}}

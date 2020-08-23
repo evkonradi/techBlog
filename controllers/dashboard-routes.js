@@ -72,4 +72,9 @@ router.get('/edit/:id', (req, res) => {
   });
 });
 
+router.get('/post-add', (req, res) => {
+  res.render('post-add-edit', { isNew: true });
+});
+
+
 module.exports = router;
