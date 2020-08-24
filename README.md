@@ -14,7 +14,7 @@ Tech Blog application allows users to create posts and leave comments. A user ne
 
 # Deployed application link:
 
-
+https://immense-reaches-05057.herokuapp.com/
 
 # GitHub repository
 
