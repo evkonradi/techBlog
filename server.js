@@ -24,11 +24,12 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'slow fast great amazing and secret',
-  cookie: {},
+  cookie: {maxAge: 1000 * 20},
   resave: false,
   saveUninitialized: true,
+  rolling: true,
   store: new SequelizeStore({
-    db: sequelize
+  db: sequelize
   })
 };
 app.use(session(sess));
