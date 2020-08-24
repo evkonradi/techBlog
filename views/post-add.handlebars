@@ -1,17 +1,15 @@
-<section>
-  <h2>Create New Post</h2>
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" />
-    </div>
-    <div>
-      <label for="post-content">Post Content</label>
-      <textarea id="post-content" rows="20"></textarea>
-    </div>
+<h2>Your Dashboard</h2>
+<form class="login-form post" id="new-post-form">
+  <span class = "title">Create New Post</span>
 
-    <button type="submit" class="btn" id="btnNewSubmit">Submit</button>
-  </form>
-</section>
+  <div class ="login-flex">
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" class="border-blue" />
+      <label for="post-content">Post Content</label>
+      <textarea id="post-content" rows="20" class="border-blue"></textarea>
+      <button type="submit" class="btnCSS" id="btnNewSubmit">Create</button>
+  </div>
+</form>
+
 
 <script src="/javascript/post-add.js"></script>

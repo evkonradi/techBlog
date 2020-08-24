@@ -1,16 +1,16 @@
 {{#if posts.length}}
 <section>
   <h2>Your Dashboard</h2>
-  <ol>
+  <ul>
     {{#each posts as |post|}}
     <li>
       {{> post-info post fromDashBoard = true}}
     </li>
     {{/each}}
-  </ol>
+  </ul>
 </section>
 {{/if}}
-<div><button type="submit" class="btn" id = "btnNewPost">+ New Post</button></div>
+<button type="submit" class="btnNewPost" id = "btnNewPost">+ New Post</button>
 
 <script src="/javascript/dashboard.js"></script>
 

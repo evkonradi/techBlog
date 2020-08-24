@@ -5,32 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/blog-style.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Home</a>
-      </h1>
+  <div class="wrapper bgHeading">
+    <header class ="container">
       <nav>
-        <a href="/dashboard">dashboard</a>
+        <a href="/">Home</a>
         {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
+        <a href="/dashboard">Dashboard</a>
         {{/if}}
+        {{#unless loggedIn}}
+        <a href="/login">Dashboard</a>
+        {{/unless}}
+        {{#if loggedIn}}
+        <a href="/" id="logout">Logout</a>
+        {{/if}}
+        {{#unless loggedIn}}
+        <a href="/login">Login</a>
+        {{/unless}}
       </nav>
-      <div>The Tech Blog</div>
+      <div class = "siteNameContainer">
+        <span class = "siteName">The Tech Blog</span>
+      </div>
     </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
   </div>
+  <main class ="wrapper">
+    <div class="container">
+      {{{ body }}}
+    </div>
+  </main>
 
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>

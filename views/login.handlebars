@@ -1,9 +1,13 @@
-<form class="login-form">
-  <h2>Login</h2>
-  {{> login }}
-  <div>
-    <button type="submit">Login</button>
+<form class="login-form post">
+  <span class = "title">Login</span>
+
+  <div class ="login-flex">
+    {{> login }}
+
+    <button type="submit" class="btnCSS">Login</button>
+    <span class="signup-instead"><a href="/signup">Sign up instead</a></span>
   </div>
-  <div><a href="/signup">Sign up instead</a></div>
+
 </form>
+
 <script src="/javascript/login.js"></script>

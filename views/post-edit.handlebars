@@ -1,18 +1,15 @@
-<section>
-  <h2>Edit Post</h2>
-  <form class="edit-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" value="{{post.title}}" />
-    </div>
-    <div>
-      <label for="post-content">Post Content</label>
-      <textarea id="post-content" rows="20">{{post.post_content}}</textarea>
-    </div>
+<h2>Your Dashboard</h2>
+<form class="login-form post" id="edit-post-form">
+  <span class = "title">Edit Post</span>
 
-    <button type="submit" class="btn" id="btnEditSubmit">Update Post</button>
-    <button type="submit" class="btn" id="btnDelete">Delete</button>
-  </form>
-</section>
+  <div class ="login-flex">
+      <label for="post-title">Title</label>
+      <input type="text" id="post-title" class="border-blue" value="{{post.title}}" />
+      <label for="post-content">Post Content</label>
+      <textarea id="post-content" rows="20" class="border-blue">{{post.post_content}}</textarea>
+      <button type="submit" class="btnCSS" id="btnEditSubmit">Update Post</button>
+      <button type="submit" class="btnCSS" id="btnDelete">Delete</button>
+  </div>
+</form>
 
 <script src="/javascript/post-edit.js"></script>

@@ -1,18 +1,21 @@
-{{> post-info post}}
+<div class="singlePostContainer">
+  {{> post-info post}}
 
-{{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body"></textarea>
+  {{> comments post.comments}}
+
+  {{#if loggedIn}}
+  <div class="post">
+    <div class="title">&nbsp;</div>
+    <form class="login-flex">
+      <label for="comment-body">Comment</label>
+      <textarea name="comment-body" id ="comment-body" class="border-blue" rows="5"></textarea>
+      <button type="submit" class="btnCSS" id="btnAddComment">Submit</button>
+    </form>
   </div>
+  {{/if}}
 
-  <div>
-    <button type="submit">add comment</button>
-  </div>
-</form>
-{{/if}}
+</div>
 
-{{> comments post.comments}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
