@@ -24,7 +24,7 @@ app.set('view engine', 'handlebars');
 
 const sess = {
   secret: 'slow fast great amazing and secret',
-  cookie: {maxAge: 1000 * 20},
+  cookie: {maxAge: 1000 * 60 * 10},
   resave: false,
   saveUninitialized: true,
   rolling: true,
